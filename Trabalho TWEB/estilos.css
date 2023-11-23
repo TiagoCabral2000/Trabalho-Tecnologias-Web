@@ -1,0 +1,23 @@
+body header {
+  background-color: lightblue;
+}
+body header .navbar-top {
+  display: flex;
+  border-style: solid;
+  justify-content: space-between;
+}
+body header .navbar-top .navbar-left {
+  border-style: solid;
+  padding: 10px;
+  padding-top: 15px;
+}
+body header .navbar-top .navbar-right {
+  border-style: solid;
+}
+body header .navbar-top .navbar-right ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0px 0px;
+  gap: 1rem;
+}/*# sourceMappingURL=estilos.css.map */
