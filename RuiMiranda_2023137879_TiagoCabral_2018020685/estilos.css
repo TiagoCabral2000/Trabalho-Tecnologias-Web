@@ -2,65 +2,82 @@ body {
   background-color: gray;
   font-family: "Montserrat", sans-serif;
   height: 1500px;
+  margin: 0;
 }
 
 ul {
   list-style-type: none;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-.flex_container {
+.flex-container {
   background-color: white;
-  height: 7em;
 }
-.flex_container ul {
-  display: grid;
-  grid-template-columns: 70% auto auto auto auto;
+.flex-container ul {
+  display: flex;
+  padding: 0;
+}
+.flex-container ul div {
+  margin: 1em 0;
+  display: flex;
+}
+
+#left-container {
+  width: 100%;
   align-items: center;
-  margin: 0 5em;
 }
-.flex_container ul li {
-  margin: 1em;
+#left-container #img-logo {
+  margin-right: auto;
+  margin-left: 3.5em;
 }
-
-#img_logo {
-  width: 28em;
-  height: auto;
+#left-container .img-icones {
+  margin-right: 1.5em;
 }
 
-.img_icones {
-  width: 2em;
-  height: auto;
-}
-
-.img_icones_pequenos {
-  width: 1em;
-  height: auto;
+#right-container {
+  align-items: center;
 }
 
 .button {
-  padding: 0.5em;
-  font-weight: 900;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  height: 50%;
+  width: 7em;
+  margin-right: 1.5em;
   border-radius: 0.4em;
+}
+.button a {
+  margin: auto;
+}
+.button .img-icones-pequenos {
+  margin-right: 0.5em;
+}
+.button #coracao {
+  height: 1em;
 }
 
 #donate {
   color: #212529;
-  text-shadow: 0 1px 0 #212529;
-  background-color: #ffec04;
+  background-color: #faeb00;
 }
 
 #help {
   color: white;
-  text-shadow: 0 1px 0 #ffffff;
-  background-color: #0874bc;
+  background-color: #0072bc;
+  margin-right: 2em;
 }
 
-@media screen and (max-width: 1050px) {
-  .flex_container {
-    height: 10em;
+@media screen and (max-width: 990px) {
+  .flex-container ul {
+    flex-direction: column;
+  }
+  .flex-container ul div {
+    justify-content: center;
   }
 }/*# sourceMappingURL=estilos.css.map */
