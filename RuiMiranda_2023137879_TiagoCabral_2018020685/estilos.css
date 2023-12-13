@@ -1,0 +1,66 @@
+body {
+  background-color: gray;
+  font-family: "Montserrat", sans-serif;
+  height: 1500px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex_container {
+  background-color: white;
+  height: 7em;
+}
+.flex_container ul {
+  display: grid;
+  grid-template-columns: 70% auto auto auto auto;
+  align-items: center;
+  margin: 0 5em;
+}
+.flex_container ul li {
+  margin: 1em;
+}
+
+#img_logo {
+  width: 28em;
+  height: auto;
+}
+
+.img_icones {
+  width: 2em;
+  height: auto;
+}
+
+.img_icones_pequenos {
+  width: 1em;
+  height: auto;
+}
+
+.button {
+  padding: 0.5em;
+  font-weight: 900;
+  border-radius: 0.4em;
+}
+
+#donate {
+  color: #212529;
+  text-shadow: 0 1px 0 #212529;
+  background-color: #ffec04;
+}
+
+#help {
+  color: white;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #0874bc;
+}
+
+@media screen and (max-width: 1050px) {
+  .flex_container {
+    height: 10em;
+  }
+}/*# sourceMappingURL=estilos.css.map */
