@@ -1,6 +1,7 @@
 body{
-    background-color: gray;
-    font-family: 'Montserrat', sans-serif;
+    //background-color: #0072bc;
+    background-color: #00bc61;
+    font-family: "Space Mono", sans-serif;
     height: 1500px;
     margin: 0; //para resetar as bordas default
 }
@@ -12,11 +13,11 @@ ul{
 
 a{
     text-decoration: none; //para resetar o sublinhado padrão
-    color:inherit; //faz com que os links herdem a cor do texto do seu conteiner-pai, resetando a cor default dos links
+    color: inherit; //faz com que os links herdem a cor do texto do seu conteiner-pai, resetando a cor default dos links
 }
 
 // ***************************************** Nav Branca - NORMAL ***************************************** //
-.flex-container{
+.white-nav{
     background-color: white;
     ul{
         display: flex;
@@ -39,6 +40,10 @@ a{
 
     .img-icones{
         margin-right: 1.5em; //espaçamento padrão entre icones
+    }
+
+    #hamburguer{
+        display:none;
     }
 }
 
@@ -79,14 +84,76 @@ a{
 
 // ***************************************** Nav Branca - Menor que 990px (MEDIA QUERY) ***************************************** //
 @media screen and (max-width:990px) {
-    .flex-container {
+    .blue-nav{
+        display: none;
+    }
+    .white-nav {
         ul{
         flex-direction: column;  // Altera para uma direção de coluna
+        margin: 0 7em; // separa os icones das bordas laterais
             div{
                 justify-content: center; // alinhar horizontalmente as divs à ul (que ocupa o mesmo espaço que a nav = fundo branco)
             }
         }
     }
+
+    #left-container{
+        border-bottom: 1px solid #f4f4f4; // cria linha cizenta
+        padding-bottom: 0.5em; // cria espaço entre logo e linha
+
+    #right-container{
+        margin-top: 0; // elimina espaço em excesso entre a linha cizenta e os botoes
+    }
+        
+        #img-logo{
+            margin-right: auto; //cria o maior espaço possivel à direita da imagem, alinhando os elementos da direita da div à direita
+            margin-left: 0; //reset
+            #logo-size{
+                width: 50%; //redimensionar logo
+            }
+        }
+    
+        .img-icones{
+            width: 50%; //redimensionar icones
+            margin-right: 1em; //novo espaçamento padrão entre icones
+        }
+
+        #hamburguer{
+            display: inline; //fazer hamburguer aparecer
+            width: 2.5%; //redimensionar hamburguer
+            margin-right: 1em;
+        }
+    }
+    
+    .button{
+        height: 2.3em;
+    }
+    
+    #help{
+        margin: 0; // reset
+    }
 }
 
-// NOTA: FALTA ELIMINAR OS MARGINS DEFINIDOS NA RESOLUÇÃO PADRÃO, POIS NESTE MEDIA QUERY DEIXAM DE FAZER SENTIDO
+// ***************************************** Nav Azul - NORMAL ***************************************** //
+.blue-nav{
+    background-color: #0072bc;
+    border: 1px solid #338ec9;
+    color:white;
+    font-weight: bold; // engrossar a letra de todo o texto da nav
+}
+
+.menu{
+    display: flex;
+    height: 100px;
+    li{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.sub-menu{
+    display: none;
+    //position: absolute;
+}
+
