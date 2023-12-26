@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     //background-color: #0072bc;
     background-color: #00bc61;
@@ -14,6 +18,10 @@ ul{
 a{
     text-decoration: none; //para resetar o sublinhado padrão
     color: inherit; //faz com que os links herdem a cor do texto do seu conteiner-pai, resetando a cor default dos links
+}
+
+header{
+    font-weight: bold; // engrossar a letra de todo o texto do header
 }
 
 // ***************************************** Nav Branca - NORMAL ***************************************** //
@@ -54,7 +62,6 @@ a{
 .button{
     display: flex; // para que dê para centralizar os seus filhos na linha seguinte
     align-items: center;
-    font-weight: bold; // engrossar a letra
     height: 50%; // em relação à altura do container right
     width: 7em;
     margin-right: 1.5em; //espaçamento padrão entre icones
@@ -84,13 +91,13 @@ a{
 
 // ***************************************** Nav Branca - Menor que 990px (MEDIA QUERY) ***************************************** //
 @media screen and (max-width:990px) {
-    .blue-nav{
-        display: none;
+    .blue-nav, .blue-nav-fixa{
+        display: none !important; 
     }
     .white-nav {
         ul{
         flex-direction: column;  // Altera para uma direção de coluna
-        margin: 0 7em; // separa os icones das bordas laterais
+        margin: 0 10%; // separa os icones das bordas laterais
             div{
                 justify-content: center; // alinhar horizontalmente as divs à ul (que ocupa o mesmo espaço que a nav = fundo branco)
             }
@@ -110,23 +117,29 @@ a{
             margin-left: 0; //reset
             #logo-size{
                 width: 50%; //redimensionar logo
+                min-width: 6em;
             }
         }
     
         .img-icones{
             width: 50%; //redimensionar icones
+            min-width: 1em;
             margin-right: 1em; //novo espaçamento padrão entre icones
         }
 
         #hamburguer{
             display: inline; //fazer hamburguer aparecer
             width: 2.5%; //redimensionar hamburguer
+            min-width: 0.9em;
             margin-right: 1em;
         }
     }
     
     .button{
         height: 2.3em;
+        a{
+            text-align: center; 
+        }
     }
     
     #help{
@@ -139,21 +152,28 @@ a{
     background-color: #0072bc;
     border: 1px solid #338ec9;
     color:white;
-    font-weight: bold; // engrossar a letra de todo o texto da nav
-}
-
-.menu{
+    position: relative;
+    width: 100%;
+    height: 5em;
     display: flex;
-    height: 100px;
-    li{
-        height: 100%;
+    ul{
         display: flex;
         align-items: center;
+        width: 100%;
+        height: 100%;
+        li{
+            padding: 2% 2%;
+            position: relative;
+            font-size: 1.3em;
+        }
+        li:hover{
+            background-color: white;
+            color:#0072bc;
+        }
     }
 }
 
-.sub-menu{
-    display: none;
-    //position: absolute;
+.blue-nav-fixa{
+    position: fixed;
+    top:0;
 }
-

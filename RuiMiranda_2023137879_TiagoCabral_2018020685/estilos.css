@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #00bc61;
   font-family: "Space Mono", sans-serif;
@@ -13,6 +17,10 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+header {
+  font-weight: bold;
 }
 
 .white-nav {
@@ -49,7 +57,6 @@ a {
 .button {
   display: flex;
   align-items: center;
-  font-weight: bold;
   height: 50%;
   width: 7em;
   margin-right: 1.5em;
@@ -77,12 +84,12 @@ a {
 }
 
 @media screen and (max-width: 990px) {
-  .blue-nav {
-    display: none;
+  .blue-nav, .blue-nav-fixa {
+    display: none !important;
   }
   .white-nav ul {
     flex-direction: column;
-    margin: 0 7em;
+    margin: 0 10%;
   }
   .white-nav ul div {
     justify-content: center;
@@ -100,18 +107,24 @@ a {
   }
   #left-container #img-logo #logo-size {
     width: 50%;
+    min-width: 6em;
   }
   #left-container .img-icones {
     width: 50%;
+    min-width: 1em;
     margin-right: 1em;
   }
   #left-container #hamburguer {
     display: inline;
     width: 2.5%;
+    min-width: 0.9em;
     margin-right: 1em;
   }
   .button {
     height: 2.3em;
+  }
+  .button a {
+    text-align: center;
   }
   #help {
     margin: 0;
@@ -121,19 +134,28 @@ a {
   background-color: #0072bc;
   border: 1px solid #338ec9;
   color: white;
-  font-weight: bold;
-}
-
-.menu {
+  position: relative;
+  width: 100%;
+  height: 5em;
   display: flex;
-  height: 100px;
 }
-.menu li {
-  height: 100%;
+.blue-nav ul {
   display: flex;
   align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.blue-nav ul li {
+  padding: 2% 2%;
+  position: relative;
+  font-size: 1.3em;
+}
+.blue-nav ul li:hover {
+  background-color: white;
+  color: #0072bc;
 }
 
-.sub-menu {
-  display: none;
+.blue-nav-fixa {
+  position: fixed;
+  top: 0;
 }/*# sourceMappingURL=estilos.css.map */
