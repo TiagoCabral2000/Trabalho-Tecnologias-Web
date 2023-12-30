@@ -11,58 +11,191 @@
 
     <!-- <link rel="stylesheet" href="reset.css"> -->
     <link rel="stylesheet" href="estilos.css"> 
-
 </head>
 
 <body>
-<header>
+    <header>
+        <nav class="white-nav">
+            <ul>
+
+            <div id="left-container">
+                <li id="hamburguer">
+                    <img src="img/hamburguer.svg">
+                </li>
+
+                <li id="img-logo"> <a href="">
+                    <img src="img/UNHCR_LOGO.svg" id="logo-size">
+                </li></a>
+                
+                <li>      
+                    <img src="img/LUPA.svg" class="img-icones">
+                </li>
+
+                <li>
+                    <img src="img/GLOBO.svg" class="img-icones">
+                </li>
+            </div>
+
+            <div id="right-container">
+                <li class="button" id="donate"> <a href="#*" role="button">
+                    <img src="img/CORACAO.svg" class="img-icones-pequenos" id="coracao">DONATE
+                </a> </li>
+
+                <li class="button" id="help"> <a href="https://help.unhcr.org/" role="button">
+                    <img src="img/INFO.svg" class="img-icones-pequenos">GET HELP
+                </a> </li>
+            </div>
+
+            </ul>
+        </nav>
+
+        <nav class="blue-nav">
+            <ul>
+                <li><a href="https://www.unhcr.org/about-unhcr">About UNHCR</a></li>
+                <li><a href="https://www.unhcr.org/what-we-do">What we Do</a></li>
+                <li><a href="https://www.unhcr.org/emergencies">Emergencies</a></li>
+                <li><a href="https://www.unhcr.org/news-and-stories">News and Stories</a></li>
+                <li><a href="https://www.unhcr.org/get-involved">Get Involved</a></li>
+            </ul>
+
+            <div id="simbolos">
+                <a href="#*"><img src="img/CORACAO-WHITE.svg"></a>
+                <a href="https://help.unhcr.org/"><img src="img/INFO.svg"></a>
+                <a href="#"><img src="img/LUPA-WHITE.svg"></a>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <div class="flex-container">
+
+        <div class="left-flex">
+                <div id="titulo">GLOBAL REFUGEE FORUM 2023</div>
+                <div id="texto">Global Refugee Forum delivers unity and action amid global crises</div>
+                <div id="buttons-container">
+                    <div class="buttons" id="botao1"><a href="https://www.unhcr.org/news/stories/global-refugee-forum-delivers-unity-and-action-amid-global-crises" role="button">Read the story</a></div>
+                    <div class="buttons " id="botao2"><a href="https://www.unhcr.org/global-refugee-forum-2023" role="button">Global Refugee Forum</a></div>
+                </div>
+        </div>
+        <div class="right-flex">
+                <div id="imagem"><img src="img/RefugeeForum.webp"></div>
+                <div id="legenda">© UNHCR/Will Swanson</div>
+        </div>
     
-    <nav class="white-nav">
-        <ul>
+    </div>
 
-        <div id="left-container">
-            <li id="hamburguer">
-                <img src="img/hamburguer.svg">
-            </li>
+    <div class="container-A">
+        <div class="content-container-A">
+           <div class="title">
+              <h1>UNHCR helps to save lives and build better futures for the millions of people forced to flee their homes.</h1>
+           </div>
+  
+           <div class="blocks">
+              <div class="BlockA">
+                 <h3>UNHCR, the UN Refugee Agency works to ensure that everybody has the right to seek asylum and find safe refuge, having fled violence, persecution or war at home.</h3>
+              </div>
+              <div class="BlockB">
+                 <p>Since 1950, we have faced multiple crises on multiple continents, and provided vital protection and assistance to refugees, asylum-seekers, internally displaced and stateless people, many of whom have nobody left to turn to.</p>
+                 <p>We help to save lives and build better futures for millions forced from home.</p>
+              </div>
+              <div class="BlockC">
+                 <button><a href="">Learn more about our work</a></button>
+                 <button><a href="">How can i get involved?</a></button>
+              </div>
+           </div>
+        </div>
+     </div>
 
-            <li id="img-logo"> <a href="">
-                <img src="img/UNHCR_LOGO.svg" id="logo-size">
-            </li></a>
+    <form class="formulario">
+        <div class="BlocoA">
+            <input type="radio" id="unica" name="doacao" checked> <label for="unica">Única</label>
+            <input type="radio" id="mensal" name="doacao"> <label for="mensal">Mensal</label>
+        </div>
+
+        <div class="BlocoBotoes">
+            <button id="20">€ 20</button>
+            <button id="40">€ 40</button>
+            <button id="80">€ 80</button>
+        </div>
+
+        <div class="BlocoC">
+            <p>Escolhe o teu próprio valor (€)</p>
+            <input type="number" id="valor" min="0" placeholder="€" required>
+        </div>
+
+        <div class="dados">
+            <p> Preenche as tuas informações </p>
+            <div class="BlocoD">
+                <p> Email </p>
+                <input type="text" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="BlocoE">
+                <p> Particular/Empresa </p>
+                <input type="radio" id="particular" name="tipo" checked> <label for="particular">Particular</label>
+                <input type="radio" id="empresa" name="tipo"> <label for="empresa">Empresa</label>
+                </input>
+
+                <div class="Particular">
+                    <input type="text" id="nome" placeholder="Nome">
+                    <input type="text" id="apelido" placeholder="Apelido">
+                    <input type="number" id="telemovel" placeholder="Telemovel">
+                    <input type="number" id="nif" placeholder="Nif">
+                    </input>
+                </div>
+    
+                <div class="Empresa">
+                    <input type="text" id="nome" placeholder="Nome">
+                    <input type="number" id="telemovel" placeholder="Telemovel">
+                    <input type="number" id="nif" placeholder="Nif">
+                </div>
+
+            </div>
+
+            <div class="Mensal">
+                <input type="text" id="rua" placeholder="Rua">
+                <input type="text" id="cidade" placeholder="Cidade">
+                <input type="number" id="postal" placeholder="Código Postal">
+                <input type="text" id="pais-origem" placeholder="País de Origem">
+            </div>
+
             
-            <li>      
-                <img src="img/LUPA.svg" class="img-icones">
-            </li>
 
-            <li>
-                <img src="img/GLOBO.svg" class="img-icones">
-            </li>
+            <div class="Bloco">
+                <p> Destino do Donativo </p>
+                <select name="pais" id="pais" required>
+                    <option value="" selected disabled>Escolhe um país</option>
+                    <option value="Nigéria">Nigéria</option>
+                    <option value="Afeganistão">Afeganistão</option>
+                    <option value="Moçambique">Moçambique</option>
+                    <option value="Somália">Somália</option>
+                    <option value="Libéria">Libéria</option>
+                    <option value="Malauí">Malauí</option>
+                </select>
+            </div>
+
+            <div class="Pagamento">
+                <p>Pagamento</p>
+                <div id="PagamentoUnico">
+                    <input type="radio" id="cc" name="pagamento"> <label for="cc">Cartão de Crédito</label>
+                    <input type="radio" id="paypal" name="pagamento"> <label for="paypal">Paypal</label>
+                    <input type="radio" id="multibanco" name="pagamento"> <label for="multibanco">Multibanco</label>
+                    <input type="radio" id="mbway" name="pagamento"> <label for="mbway">MBWay</label>
+                </div>
+
+                <div id="PagamentoMensal">
+                    <input type="radio" id="cc" name="pagamento"> <label for="cc">Cartão de Crédito</label>
+                    <input type="radio" id="dd" name="pagamento"> <label for="dd">Débito Direto</label>
+                </div>
+
+            </div>
         </div>
 
-        <div id="right-container">
-            <li class="button" id="donate"> <a href="" role="button">
-                <img src="img/CORACAO.svg" class="img-icones-pequenos" id="coracao">DONATE
-            </a> </li>
+        <div id="resultado"></div>
+        <div class="submit"><button type="submit">Doar</button></div>
+    </form>
 
-            <li class="button" id="help"> <a href="https://help.unhcr.org/" role="button">
-                <img src="img/INFO.svg" class="img-icones-pequenos">GET HELP
-            </a> </li>
-        </div>
-
-        </ul>
-    </nav>
-
-    <nav class="blue-nav">
-        <ul>
-            <li><a href="#">About UNHCR</a></li>
-            <li><a href="#">What we Do</a></li>
-            <li><a href="#">Emergencies</a></li>
-            <li><a href="#">News and Stories</a></li>
-            <li><a href="#">Get Involved</a></li>
-        </ul>
-    </nav>
-
-</header>
-
-<script type="text/javascript" src="logica.js"></script>
+    <script type="text/javascript" src="logica.js"></script>
 </body>
 </html>

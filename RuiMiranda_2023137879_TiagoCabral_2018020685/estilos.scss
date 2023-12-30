@@ -3,10 +3,7 @@
 }
 
 body{
-    //background-color: #0072bc;
-    background-color: #00bc61;
     font-family: "Space Mono", sans-serif;
-    height: 1500px;
     margin: 0; //para resetar as bordas default
 }
 
@@ -88,9 +85,230 @@ header{
     background-color: #0072bc;
     margin-right: 2em; //espaçamento padrão até à borda (soma com o espaçamento right da class button)
 }
+// ***************************************** Nav Azul - NORMAL ***************************************** sem dropdown menu //
+.blue-nav{
+    background-color: #0072bc;
+    border: 1px solid #338ec9;
+    box-shadow: 0 20px 24px 0 rgba(0,0,0,.16); //offset-x, offset-y, blur-radius, spread-radius, color
+    color:white;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    ul{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        li{
+            padding: 2% 2%;
+            position: relative;
+            font-size: 1.3em;
+        }
+        li:hover{
+            background-color: white;
+            color:#0072bc;
+        }
+    }
+    #simbolos{
+        display: none;
+    }
+}
 
-// ***************************************** Nav Branca - Menor que 990px (MEDIA QUERY) ***************************************** //
-@media screen and (max-width:990px) {
+.blue-nav-fixa{
+    position: fixed;
+    top: 0;
+    #simbolos{
+        display: flex;
+        align-items: center;
+        img{
+            margin-right:1.5em;
+            height: 1.8em;
+        }
+    }
+}
+
+
+
+// ***************************************** 1º: Bloco Azul: Normal ***************************************** //
+.flex-container{
+    padding: 4em;
+    background-color: #0072bc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    .left-flex{
+        font-weight: bold;
+        width: 30%;
+        margin-right: 2em;
+        #titulo{
+            color:#faeb00;
+        }
+        #texto{
+            display: flex;
+            margin-bottom: 0.6em;
+            color:white;
+            font-size: 2.5em;
+        }
+        #botao1{
+            background-color:#faeb00;
+            margin-bottom: 1em;
+            width: 30%;
+        }
+        #botao2{
+            color:white;
+            border: 2px solid white;
+            width: 45%;
+        }
+        #buttons-container{
+            display: flex;
+            flex-direction: column;
+            .buttons{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0.2em;
+                width: 100%;
+                a{
+                    padding: 0.5em 0; 
+                }
+            }
+            #botao1{
+                max-width: 40%;
+            }
+            #botao2{
+                max-width: 60%;
+            }
+        }
+        
+    }
+
+    .right-flex{
+        width: 60%;
+        #imagem{
+            img{
+                width: 100%;
+            }
+        }
+        #legenda{
+            color: white;
+            font-size: 0.8em;
+            margin-top: 1em;
+        }
+    }
+}
+
+.blocks{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr) 1fr;
+    gap: 2em;
+
+    .BlockA{
+        border-bottom: 5px solid #f4f4f4;
+    }
+    .BlockC{
+        display: flex;
+        flex-direction: column;
+        button{
+            font-weight: bold;
+            background-color: white;
+            border-radius: 0.2em;
+            padding: 0.5em;
+            margin-bottom:1em;
+        }
+
+        button:hover{
+            background-color:#e5e5e5;
+        }
+    }
+}
+
+.container-A{
+    margin: 2em 12em;
+}
+
+.formulario{
+    background-color:#0072bc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .BlocoA{
+        font-weight: bold;
+        font-size: 1.7em;
+        margin: 0.5em;
+        margin-top: 2em;
+        label{
+            cursor: pointer;
+            background-color: white;
+            padding: 0.2em;
+            border-radius: 0.1em;
+        }
+        input{
+            display: none;
+        }
+        input:checked + label{
+        background-color: #faeb00;
+        }
+    }
+    .BlocoBotoes{
+        margin-top:0.5em;
+        button{
+            font-weight: bold;
+            font-size: 1em;
+            background-color: white;
+            padding: 0.8em 2.5em;
+            border-radius: 0.2em;
+            border: 0;
+        }
+    }
+    .BlocoC{
+        display: flex;
+        flex-direction: column;
+        margin-top:0.5em;
+        color:white;
+    }
+    .dados{
+        color:white;
+        .BlocoE{
+            .Empresa{
+                display: none;
+            }
+        }
+    }
+    .Mensal{
+        display: none;
+    }
+    .Pagamento{
+        #PagamentoMensal{
+            display: none;
+        }
+    }
+    .submit{
+        margin-top: 1em;
+        margin-bottom: 2em;
+        button{
+            background-color: #faeb00;
+            padding: 1em 20em;
+            font-weight: bold;
+            font-size: 100%;
+            border-radius: 0.3em;
+            border: 0;
+        }
+    }
+    #resultado{
+        display: none;
+        margin-top: 1em;
+        font-weight: bold;
+        background-color: white;
+        border-radius: 0.2em;
+        padding: 1em;
+    }
+}
+
+
+// ***************************************** Nav Branca - Menor que 1000px (MEDIA QUERY) ***************************************** //
+@media screen and (max-width:1000px) {
     .blue-nav, .blue-nav-fixa{
         display: none !important; 
     }
@@ -145,35 +363,36 @@ header{
     #help{
         margin: 0; // reset
     }
-}
 
-// ***************************************** Nav Azul - NORMAL ***************************************** //
-.blue-nav{
-    background-color: #0072bc;
-    border: 1px solid #338ec9;
-    color:white;
-    position: relative;
-    width: 100%;
-    height: 5em;
-    display: flex;
-    ul{
+
+    .flex-container{
+        padding: 2em;
+        flex-direction: column;
+        justify-content: center;
+        
+        .left-flex{
+            width: 100%;
+        }
+    
+        .right-flex{
+            width: 60%;
+            #imagem{
+                img{
+                    width: 100%;
+                }
+            }
+            #legenda{
+                color: white;
+                font-size: 0.8em;
+            }
+        }
+    }
+    .buttons{
         display: flex;
+        justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
-        li{
-            padding: 2% 2%;
-            position: relative;
-            font-size: 1.3em;
-        }
-        li:hover{
-            background-color: white;
-            color:#0072bc;
-        }
+        border-radius: 0.2em;
+        height: 2em;
     }
 }
 
-.blue-nav-fixa{
-    position: fixed;
-    top:0;
-}
